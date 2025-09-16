@@ -1,0 +1,187 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: black;
+  margin: 0;
+  overflow: hidden;
+}
+
+#gameCanvas {
+  border: 2px solid white;
+  border-radius: 10px;
+  max-width: 95vw;
+  max-height: 90vh;
+  background: transparent;
+}
+
+/* Menus & popups scale for smaller devices */
+.menu-paper, .popup-content {
+  width: 90%;
+  max-width: 500px;
+  padding: 20px;
+}
+
+.menu-paper h1 {
+  font-size: clamp(32px, 8vw, 64px);
+}
+
+.menu-btn {
+  font-size: clamp(16px, 5vw, 22px);
+  padding: 10px 20px;
+}
+
+
+/* Popup */
+.popup {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.75);
+  display: none; /* hidden by default */
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* Notebook-style popup content */
+.popup-content {
+  width: 500px;
+  padding: 40px;
+  border: 2px solid #000;
+  background: repeating-linear-gradient(
+    #fff,
+    #fff 28px,
+    #dceafc 28px,
+    #dceafc 29px
+  ); /* notebook lines */
+  position: relative;
+  text-align: center;
+  font-family: "Rock Salt", cursive;
+  color: black;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+/* Red margin line */
+.popup-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50px;
+  width: 2px;
+  height: 100%;
+  background: red;
+}
+
+
+
+/* Replay button (token) */
+#replayBtn {
+  margin-top: 20px;
+  width: 80px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+#replayBtn:hover {
+  transform: scale(1.2);
+  content: url("assets/light_token.png"); /* 👈 swaps token image */
+}
+
+#goodTrip, #badTrip {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  display: none;
+}
+
+/* Notebook-style menu */
+.menu {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fdf6e3; /* paper color */
+  z-index: 1000;
+}
+
+.menu-paper {
+  width: 500px;
+  padding: 40px;
+  border: 2px solid #000;
+  background: repeating-linear-gradient(
+    #fff,
+    #fff 28px,
+    #dceafc 28px,
+    #dceafc 29px
+  ); /* notebook lines */
+  position: relative;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  border-radius: 12px;
+}
+
+.menu-paper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50px;
+  width: 2px;
+  height: 100%;
+  background: red; /* notebook margin line */
+}
+
+.menu-paper h1 {
+  font-family: "Rock Salt", cursive;
+  font-size: 64px;
+  margin: 20px 0;
+  color: black;
+  text-shadow: 1px 1px 0 white;
+}
+
+#menuStoner {
+  width: 120px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Buttons */
+.menu-btn {
+  margin: 10px;
+  padding: 12px 24px;
+  font-size: 22px;
+  font-family: "Rock Salt", cursive;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.menu-btn:hover {
+  transform: scale(1.1);
+  background: #333;
+}
+
+/* Help popup */
+.popup {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.75);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+

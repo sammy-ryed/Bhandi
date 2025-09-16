@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bhandi - The High Escape</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <video id="goodTrip" src="assets/bg1.mp4" preload="auto" muted loop playsinline></video>
+  <video id="badTrip" src="assets/bg2.mp4" preload="auto" muted loop playsinline></video>
+  <!-- Opening Menu -->
+<div id="menu" class="menu">
+  <div class="menu-paper">
+    <img src="assets/og.png" id="menuStoner" alt="Stoner" />
+    <h1>Bhandi</h1>
+    <button id="startBtn" class="menu-btn">▶ Play</button>
+    <button id="helpBtn" class="menu-btn">❓</button>
+  </div>
+</div>
+
+<!-- Help Popup -->
+<div id="helpPopup" class="popup">
+  <div class="popup-content">
+    <h2>How to Play</h2>
+    <p>
+      1. Press any key or click to flap.<br>
+      2. Collect tokens for Good/Bad Trips.<br>
+      3. A joint has a chance of giving you a GT or BT<br>
+      4. GT can make you go through walls and BT messes up with your controls<br>
+      5. Avoid the spikes!<br>
+      6. Survive as long as you can and get more hits.
+    </p>
+    <button id="closeHelp" class="menu-btn">Close</button>
+  </div>
+</div>
+
+  <canvas id="gameCanvas"></canvas>
+  <script src="script.js" defer></script>
+
+  <!-- Replay Popup -->
+  <div id="replayPopup" class="popup">
+    <div class="popup-content">
+      <h2 id="popupText">BUSTED!<br><br>Another hit?</h2>
+      <img id="replayBtn" src="assets/token.png" alt="Restart" />
+    </div>
+  </div>
+</body>
+
+</html>
