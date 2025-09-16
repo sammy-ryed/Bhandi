@@ -38,8 +38,8 @@ That’s exactly what this project is:
 2. If you're into nerdy stuff: Clone this repo like you’re stealing your neighbor’s WiFi.  
    ```bash
    git clone https://github.com/sammy-ryed/bhandi.git
-3. Open bhandi.html in your browser.
-4 Sit back, relax, and question your life choices.
+3. Open bhandi.html in your browser.   
+4. Sit back, relax, and question your life choices.
 
 ## How to Play
 1. Press any key or click to flap.
